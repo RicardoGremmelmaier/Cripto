@@ -36,7 +36,7 @@ int main (int argc, char *argv[]) {
       }   
       else if (strcmp(option,"dec") == 0) {
          /*ch - 'a' equivale a transformar {a, b, c, ..., z} para o intervalo {0, 1, ..., 25}!*/
-         code = ((ch - 'a') - shift) < 0? ((ch - 'a') - shift) + 26 % alphabet_size + 'a' : ((ch - 'a') - shift) % alphabet_size + 'a';
+         code = (((ch - 'a') - shift) + alphabet_size) % alphabet_size + 'a';
       }
       else {
          printf("error: function \"%s\" does not exist!\n", option);
