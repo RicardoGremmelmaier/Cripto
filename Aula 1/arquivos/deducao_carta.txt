@@ -1,4 +1,43 @@
 A carta apresenta diversos bigramas e trigramas que podem ser observados a partir da análise de frequência (ou pelo próprio editor de texto, ao selecionar um deles) .
 Por exemplo o bigrama 9C, que foi escolhido devido a sua análise, ao verificar na carta, é possível perceber que ele aparece tanto dentro de outras palavras como separadamente.
 Esse fator pode indicar a sua veracidade como bigrama, já que ambas frequencias das letras 9 e C aparecem em grande quantidade, tanto isoladamente quanto juntas.
-Por ser então um dos mais frequentes, vamos substituir inicialmente esse bigrama pela letra "a".
+Por ser então um dos mais frequentes, vamos substituir inicialmente esse bigrama pela letra "a". De maneira similar, vamos substituir CK por e A3 por o, que são as maiores
+frequências de bigramas
+Para o próximo bigrama, vamos substituir o bigrama P2 por d, já que ele aparece repetidamente junto com nosso "a" e "o" substituído, de forma em que eles ficam juntos.
+Na sequencia, alteraremos 4M por s, devido ao "e4M4Me" gerado, representando "esse". O próximo é por análise de frequência, onde será substituído 659 por "r". 
+A próxima substituição se dará por "W2a" que irá representar na, ou seja, W2 por n. De maneira similar para "esG3a", onde G3 vai ser substituído por t.
+Para esse próximo caso, vamos analisar "tZ3dos". A palavra que indica ser todos, possui o bigrama Z3, que pode ter sido um erro de decriptografia ou apenas um erro
+manual causado por quem criptografou. Como Z3 só apareceu uma vez durante toda a carta, vamos assumir que ele errou e substituir por "o".
+O KaK gerado ocorreu devido a um erro de ordem de descriptografia (eKaK) e deve ser substituído por le.
+esB5ero terá seu B5 substituído por p pela análise da palavra, assim como seV8ana V8 será substituído por m. O próximo será pedXTdo, em que XT irá ser substituído por i
+Assim como 854om, irá virar "com", tamX1em substituirá X1 por b. poHNco, onde HN virará u e conpK9icado onde K9 virará l.
+D2ue e D2uiser indicam que D2 deverá ser q. 148aponeis indica que 148 deverá ser j, assim como diM5icil indica que M5 deverá ser f. ami723o indica que 723 deverá ser g.
+leF7antar indica que F7 deverá ser v, camin8Aada indica que 8A deverá ser h, infeli491mente indica que 491 deverá ser z, eNTiste indica que NT deverá ser x.
+Por fim, "o de OP" indica que OP deverá ser k, "cá"
+
+
+**Substituições**            **Motivo**
+9C  -> a                     Análise de frequência
+CK  -> e                     Análise de frequência
+A3  -> o                     Análise de frequência
+P2  -> d                     Análise da carta
+4M  -> s                     Análise da carta
+659 -> r                     Análise de frequência
+W2  -> n                     Análise da carta
+G3  -> t                     Análise da carta
+Z3  -> o                     Erro de quem criptografou (A3)
+B5  -> p                     Análise da carta
+V8  -> m                     Análise da carta
+XT  -> i                     Análise da carta
+854 -> c                     Análise da carta
+X1  -> b                     Análise da carta
+HN  -> u                     Análise da carta
+K9  -> l                     Análise da carta
+D2  -> q                     Análise da carta
+148 -> j                     Análise da carta
+M5  -> f                     Análise da carta
+723 -> g                     Análise da carta
+F7  -> v                     Análise da carta
+8A  -> h                     Análise da carta
+NT  -> x                     Análise da carta
+OP  -> k                     Análise da carta
