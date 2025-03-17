@@ -1,0 +1,4 @@
+A carta apresenta diversos bigramas e trigramas que podem ser observados a partir da análise de frequência (ou pelo próprio editor de texto, ao selecionar um deles) .
+Por exemplo o bigrama 9C, que foi escolhido devido a sua análise, ao verificar na carta, é possível perceber que ele aparece tanto dentro de outras palavras como separadamente.
+Esse fator pode indicar a sua veracidade como bigrama, já que ambas frequencias das letras 9 e C aparecem em grande quantidade, tanto isoladamente quanto juntas.
+Por ser então um dos mais frequentes, vamos substituir inicialmente esse bigrama pela letra "a".
