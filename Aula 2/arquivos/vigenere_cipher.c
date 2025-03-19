@@ -20,13 +20,13 @@ int main (int argc, char *argv[]) {
     int key_size = strlen(key);
     int key_index = 0;
 
-    // Criação do quadrado de Vigènere
-    char vigenere_square[alphabet_size][alphabet_size];
-    for (int i = 0; i < alphabet_size; i++) {
-        for (int j = 0; j < alphabet_size; j++) {
-            vigenere_square[i][j] = ((i + j) % alphabet_size) + 'a';
-        }
-    }
+    // Criação do quadrado de Vigènere (DESCOMENTAR se for utilizar o quadrado para cifrar e decifrar)
+    // char vigenere_square[alphabet_size][alphabet_size];
+    // for (int i = 0; i < alphabet_size; i++) {
+    //     for (int j = 0; j < alphabet_size; j++) {
+    //         vigenere_square[i][j] = ((i + j) % alphabet_size) + 'a';
+    //     }
+    // }
 
     while (!feof(ifile)) {
         char ch, code;
@@ -43,36 +43,38 @@ int main (int argc, char *argv[]) {
         else if (strcmp(option,"enc") == 0) {
             /* Usando o quadrado de Vigènere para cifrar */
 
-            code = vigenere_square[ch - 'a'][key[key_index] - 'a'];
-            key_index = (key_index + 1) % key_size;
+            // code = vigenere_square[ch - 'a'][key[key_index] - 'a'];
+            // key_index = (key_index + 1) % key_size;
 
             /*Sem utilizar o quadrado para cifrar */
+
             /*O quadrado funciona como variadas cifras de César, ou seja, basta somar o valor da letra da mensagem com o valor da letra da chave
               e ai não faz necessário o uso da tabela, para esse alfabeto.
             */ 
            
-            //code = (ch - 'a' + key[key_index] - 'a') % alphabet_size + 'a';
-            //key_index = (key_index + 1) % key_size;
+            code = (ch - 'a' + key[key_index] - 'a') % alphabet_size + 'a';
+            key_index = (key_index + 1) % key_size;
         }   
         else if (strcmp(option,"dec") == 0) {
             /* Usando o quadrado de Vigènere para decifrar */
             //Percorro a linha da letra da chave buscando encontrar o char criptografado, assim pego o valor inicial atraves de um contador
 
-            for (int i = 0; i < alphabet_size; i++) {
-                if (vigenere_square[key[key_index] - 'a'][i] == ch) {
-                    code = i + 'a';
-                    key_index = (key_index + 1) % key_size;
-                    break;
-                }
-            }
+            // for (int i = 0; i < alphabet_size; i++) {
+            //     if (vigenere_square[key[key_index] - 'a'][i] == ch) {
+            //         code = i + 'a';
+            //         key_index = (key_index + 1) % key_size;
+            //         break;
+            //     }
+            // }
 
             /* Sem utilizar o quadrado para decifrar */
+
             /* De forma similar, basta subtrair o valor da letra da mensagem com o valor da letra da chave
                e ai não faz necessário o uso da tabela, para esse alfabeto.
             */
 
-            // code = (((ch - 'a' + alphabet_size) % alphabet_size - (key[key_index] - 'a' + alphabet_size) % alphabet_size) + alphabet_size) % alphabet_size + 'a';
-            // key_index = (key_index + 1) % key_size;
+            code = (((ch - 'a' + alphabet_size) % alphabet_size - (key[key_index] - 'a' + alphabet_size) % alphabet_size) + alphabet_size) % alphabet_size + 'a';
+            key_index = (key_index + 1) % key_size;
 
         }
         else {
