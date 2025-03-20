@@ -37,8 +37,8 @@ int matching (const double *freq) {
     for (rotate = 0; rotate < 26; rotate++) {
         fit = 0;
         for (i = 0; i < 26; i++) {
-            d = freq[(i + rotate) % 26] / sum - pfreq[i];
-            fit += d * d / pfreq[i];
+            d = freq[(i + rotate) % 26] / sum - ifreq[i];
+            fit += d * d / ifreq[i];
         }
         if (fit < best_fit) {
             best_fit = fit;
@@ -85,8 +85,8 @@ double freq_every_nth(const int *msg, int msg_size, int interval, char *key) {
    }   
  
    for (i = 0, ret = 0; i < 26; i++) {
-      d = accu[i] / sum - pfreq[i];
-      ret += d * d / pfreq[i];
+      d = accu[i] / sum - ifreq[i];
+      ret += d * d / ifreq[i];
    }
  
    key[interval] = '\0';

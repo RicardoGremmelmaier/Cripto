@@ -52,7 +52,7 @@ int main (int argc, char *argv[]) {
               e ai não faz necessário o uso da tabela, para esse alfabeto.
             */ 
            
-            code = (ch - 'a' + key[key_index] - 'a') % alphabet_size + 'a';
+            code = (((ch - 'a' + alphabet_size)% alphabet_size + (key[key_index] - 'a' + alphabet_size) % alphabet_size) + alphabet_size) % alphabet_size + 'a';
             key_index = (key_index + 1) % key_size;
         }   
         else if (strcmp(option,"dec") == 0) {

@@ -1,0 +1,3 @@
+O programa consegue adivinhar as senhas de maneira mais consistente em textos mais longos ou que possuam 
+repetições de palavras. Para as chaves, quando consistente o texto, ele adivinhou diversas chaves, com tamanhos variados.
+Chaves curtas, medias, longas, repetitivas ou não, ambas funcionaram quando o texto se mostrou efetivo.
