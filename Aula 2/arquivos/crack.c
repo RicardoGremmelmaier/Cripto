@@ -21,6 +21,13 @@ const double ifreq[] = {
    0.0197, 0.0007 };
 
 /*Descrever o que faz: ... */
+/*
+   Recebe um vetor de frequências e para cada uma das 26 opções de letras do alfabeto, ele verifica
+   cada uma das opções de deslocamento, somando seu fit (o quão próximo fica da frequencia desejada, quanto menor melhor)
+   através da linha 39 e 40. O menor fit irá indicar qual será o deslocamento que deve ser realizado, para que
+   a frequencia esteja mais próxima da frequencia desejada.
+   Por fim, ele retorna esse valor de deslocamento (best_rotate).
+*/
 int matching (const double *freq) {
     double sum = 0, fit, d, best_fit = 1e100;
     int i, rotate, best_rotate = 0;
@@ -42,6 +49,15 @@ int matching (const double *freq) {
 }
  
 /*Descrever o que faz: ... */
+/*
+   A função recebe a mensagem, o tamanho da mensagem, o suposto tamanho da chave e o ponteiro para adivinhar a chave.
+   Ela inicialmente calcula a frequência de cada letra da mensagem a cada intervalo
+   (por exemplo, de 2 em 2, de 5 em 5) e armazena no vetor freq. Após calculada a frequencia,
+   ela chama a função de matching para descobrir o melhor deslocamento. Esse deslocamento será a letra inicial da chave, na linha 72.
+   A função repete isso para todo o tamanho da chave, preenchendo ela completamente.
+   Após isso, ela verifica o fitness total da chave, de maneira similar a usada na função de matching e retorna esse valor de fitness.
+   Quanto menor esse valor, mais próximo a chave está da chave correta.
+*/
 double freq_every_nth(const int *msg, int msg_size, int interval, char *key) {
    
    double sum, d, ret;
@@ -102,7 +118,12 @@ int main (int argc, char *argv[]) {
    int interval;
    double fit, best_fit = 1e100;
    char key[100];
-   /*?*/
+   /*
+      Utiliza das funções auxiliares matching e freq_every_nth para descobrir a chave.
+      A função matching é utilizada para descobrir o melhor deslocamento para cada letra da chave.
+      A função freq_every_nth é utilizada para descobrir a chave completa, utilizando o tamanho da chave como parâmetro.
+   */
+   
    for (interval = 1; interval <= 30; interval++) {
       fit = freq_every_nth (txt, len, interval, key);
       printf("Fitness: %2.7f, Tamanho: %2d, Chave: %s", fit, interval, key);
