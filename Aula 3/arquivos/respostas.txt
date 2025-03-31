@@ -1,0 +1,15 @@
+2- Apesar de ser possível descobrir a chave com esse ataque de exaustão, não da pra afirmar a verocidade da chave descoberta, já que a mensagem
+decifrada pode ter sido decifrada por coincidência em outra mensagem cuja não era a enviada de fato. Ou seja, apesar de assumir que a chave seja tal,
+não é possível ter certeza devido ao fato de não se conhecer a mensagem correta.
+
+4- A letra a não é válida já que apesar de p1 e p2 conseguirem decifrar k, p2 com p3 não conseguem decifrar k. A letra b também não é válida, já que
+p2 consegue decifrar sozinho k, e isso não é permitido. A letra c é válida, já que p1 consegue decifrar k aliado a p2 ou p3, p2 consegue decifrar k
+aliado a p1 ou p3 e p3 consegue decifrar k aliado a p1 ou p2, mas nenhuma delas consegue decifrar k sozinho. A letra d não é válida já que p1 aliado
+a p2 não conseguem decifrar k. Por fim, a letra e não é válida já que p2 aliado a p3 não conseguem decifrar k.
+
+6- É possível obter 256! estados finais.
+
+7- O protocolo WEP usa um Initialization Vector de 24 bits para garantir a integridade dos pacotes recebidos, ou seja, para confirmar que eles não 
+foram modificados em trânsito. o IV é incluso no pacote numa parte da mensagem, e seu objetivo é garantir que duas mensagens cifradas não sejam 
+encriptadas com o mesmo fluxo de chave. As redes wifi podem utilizar WEP (RC4, chave com 40 bits e IV com 24 bits), WPA (RC4, chave com 128 bits 
+e IV com 48 bits), WPA2 (AES, chave com 128 bits e IV com 48 bits), WPA3 (AES, chave com ate 256 bits, usa HMAC de 384 bits).
