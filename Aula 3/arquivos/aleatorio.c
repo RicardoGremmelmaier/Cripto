@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "aleatorio.h"
 
 static unsigned long long next = 12345;
 

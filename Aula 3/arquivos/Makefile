@@ -1,13 +1,13 @@
 CC=gcc
 
-cifra_xor:
-	$(CC) cifra_xor.c -o cifra_xor
+xor_cipher:
+	$(CC) xor_cipher.c -o xor_cipher
 	
 rc4:
 	$(CC) rc4.c -o rc4
 
-clean_cifra_xor:
-	rm cifra_xor
+clean_xor_cipher:
+	rm xor_cipher
 
 clean_rc4:
 	rm rc4
