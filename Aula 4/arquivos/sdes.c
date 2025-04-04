@@ -264,9 +264,9 @@ int main (int argc, const char* argv[]) {
       /*reading character: */
       fscanf (in_file, "%c", &ch);
       if (!feof(in_file)) {
-         //printf ("caractere: %c, ", ch);
-         //printf ("ascii (bits): ");
-         //display_bits((int)ch, 8); 
+         printf ("caractere: %c, ", ch);
+         printf ("ascii (bits): ");
+         display_bits((int)ch, 8); 
          /*initial permutation (ip):*/
          ch = ip(ch);
          /*apply function Fk:*/
@@ -275,8 +275,8 @@ int main (int argc, const char* argv[]) {
          ch = ip_inverse(ch);
          /*writing character: */
          fprintf(out_file, "%c", ch);
-         //printf ("codificação (bits): ");
-         //display_bits((int)ch, 8); 
+         printf ("codificação (bits): ");
+         display_bits((int)ch, 8); 
       }
    }
    printf("Ready!\n");
