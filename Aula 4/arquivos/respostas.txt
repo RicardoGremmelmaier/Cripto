@@ -1,3 +1,15 @@
 1- O coração da segurança do DES se encontra nas s-boxes. Elas que geram a confusão nas cifras a 
 partir de operações não lineares e possuem 8 regras para os seus valores.
 
+2- Ao utilizar a chave 473, os bits originais são 01100101, e os bits modificados são 00010100,
+ou seja, mudaram no total 4 bits. Para a chave 472, os bits originais são 01100101, e os bits modificados 
+são 11111101, ou seja, mudaram no total 3 bits.
+
+3- A chave utilizada foi a chave 912, em que o texto decifrado é:
+"A felicidade nao depende do que nos falta, mas do bom uso do que temos."
+
+4- O arquivo não conseguiu ser decifrado, pois foi adicionado outras duas camadas de segurança ao encriptar
+duas vezes. A chave correta utilizada, 912, não retornou um texto compreensível devido a isso
+
+6- Ao realizar o comando do gpg e inserir posteriormente a senha, o texto foi decifrado e é um
+trecho de Os Lusíadas - Camões
