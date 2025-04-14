@@ -1,0 +1,42 @@
+2- Para encontrar as próximas 4 Words, é necessário realizar o xor de uma palavra i com seu sucessor 
+módulo 3, ou seja, w0 com w1, w1 com w2, w2 com w3 e w3 com w0. Vale ressaltar no entanto, que para o valor
+w3, w7, w11, etc, é preciso passar a word pela função g antes de realizar o xor com seu sucessor. 
+
+A mágica para lidar com chaves de tamanhos diferentes é diversificar a quantidade de rounds intermediários 
+que ocorrem no key scheduling, podendo ser 9, 11 ou 13 e aumentando o array de chaves (43, 51 e 59 posições).
+
+O texto em claro em um bloco com 128 bits é permutado para um conjunto de 2^128 possibilidades para um texto cifrado.
+Ou seja, o tamanho da chave pode crescer para tamanhos enormes sem ter que se preocupar com permutações duplicadas.
+
+3- O polinômio a é irredutível, já que o polinômio b pode ser derivado a partir de
+(x+2)².
+
+5- Foi escolhido a key scheduling (ou expansion) para ser explicada.
+
+No AES, a chave original não é usada diretamente em todas as rodadas. Em vez disso, ela serve como ponto de partida para 
+gerar uma sequência de subchaves — uma para cada fase da cifra. Esse processo se chama expansão da chave.
+
+Para o AES-128, são necessárias 11 chaves diferentes (o total do numero de rounds mais uma), todas com 16 bytes cada. A 
+primeira é a própria chave original, e as outras 10 são geradas a partir dela. No total, o algoritmo precisa de 176 bytes 
+de chave, que são construídos a partir dos 16 bytes da chave inicial.
+
+A chave original de 16 bytes é dividida em 4 partes de 4 bytes, chamadas de "words". A expansão da chave consiste em criar 
+novas palavras de 4 bytes até que se tenha 44 palavras no total (de 0 a 43). Cada novo grupo de 4 palavras forma uma subchave, 
+que será usada em uma rodada da cifra AES.
+
+Depois de definir as 4 primeiras palavras com os 16 bytes da chave original, o algoritmo entra num laço que cria uma nova 
+palavra de cada vez, até chegar à 44ª palavra. A forma como cada nova palavra é criada depende da posição dela na sequência:
+
+Se a nova palavra não for múltipla de 4, faça:
+Pegue a palavra anterior.
+Pegue a palavra que está 4 posições antes.
+Faça uma operação chamada XOR entre essas duas palavras.
+
+Se a nova palavra for múltipla de 4, faça:
+Pegue os 4 bytes da palavra e mova todos uma posição para a esquerda.
+Pegue cada um dos 4 bytes dessa nova palavra rotacionada e substitua por outro valor, usando a S-box.
+Aplique uma operação com uma constante pré-definida que depende do número da rodada em que você está. Essa constante serve 
+para garantir que cada rodada da cifra tenha uma chave única, e para evitar que padrões se repitam.
+Faça a operação XOR com a palavra que está quatro posições atrás na sequência.
+
+Esse processo é repetido palavra por palavra até que se obtenha todas as palavras necessárias.
