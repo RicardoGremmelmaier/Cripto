@@ -1,0 +1,35 @@
+3- 
+naive(5, 6, 23) = 8
+Execution time: 0.000085 seconds
+improved(5, 6, 23) = 8
+Execution time: 0.000033 seconds
+square_mul(5, 6, 23) = 8
+Execution time: 0.000019 seconds
+
+naive(5, 15, 23) = 19
+Execution time: 0.000047 seconds
+improved(5, 15, 23) = 19
+Execution time: 0.000019 seconds
+square_mul(5, 15, 23) = 19
+Execution time: 0.000018 seconds
+
+naive(5, 36, 97) = 29
+Execution time: 0.000093 seconds
+improved(5, 36, 97) = 50
+Execution time: 0.000003 seconds
+square_mul(5, 36, 97) = 50
+Execution time: 0.000002 seconds
+
+naive(5, 58, 97) = 43
+Execution time: 0.000049 seconds
+improved(5, 58, 97) = 44
+Execution time: 0.000019 seconds
+square_mul(5, 58, 97) = 44
+Execution time: 0.000002 seconds
+
+naive(98, 1000000000, 65) = 0
+Execution time: 1.742655 seconds
+improved(98, 1000000000, 65) = 61
+Execution time: 10.296934 seconds
+square_mul(98, 1000000000, 65) = 61
+Execution time: 0.000003 seconds
