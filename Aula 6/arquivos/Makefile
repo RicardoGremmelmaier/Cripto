@@ -4,5 +4,8 @@ exponential:
 modular:
 	gcc -o modular modular.c
 
+crack:
+	gcc -o crack crack.c
+
 clean:
-	rm -f exponential modular
+	rm -f exponential modular crack
