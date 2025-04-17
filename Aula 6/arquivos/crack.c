@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "exponential.h"
 
 /*
     Preciso calcular valores para a e b, onde A = q^a mod p 
@@ -11,19 +10,29 @@
     
 */
 
+unsigned long square_mul(unsigned long q, unsigned long x, unsigned long n) {
+    unsigned long r = 1;
+
+    while (x > 0){
+        if ((x%2) == 1){
+            r = (r * q) % n;
+        }
+        x /= 2;
+        q = (q * q) % n;
+    }
+
+    return r;
+}
 
 unsigned long find(unsigned long p, unsigned long q, unsigned long X){
     unsigned long result; 
-
-    for (unsigned long key = 1; key < p; key++) {
+    unsigned long key = 1;
+    for (key = 1; key < p; key++) {
         result = square_mul(q, key, p);
-        printf("result = %lu\n", result);
         if (result == X) return key;
     }
-
     printf("Key not found\n");
     return 0;
-
 }
 
 

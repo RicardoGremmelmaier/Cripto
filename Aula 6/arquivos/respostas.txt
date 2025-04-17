@@ -34,7 +34,16 @@ Execution time: 10.296934 seconds
 square_mul(98, 1000000000, 65) = 61
 Execution time: 0.000003 seconds
 
-4- 
+4- Na primeira possibilidade, as chaves privadas foram a=4, b=3 e a chave compartilhada foi key=148
+Não exigiu muito tempo para crackear a chave.
+
+Na segunda possibilidade, as chaves privadas foram a=183, b=806 e a chave compartilhada foi key=4064
+Não exigiu muito tempo para crackear a chave.
+
+Na terceira possibilidade, as chaves privadas foram a=7764, b=7046 e a chave compartilhada foi key=7098
+Não exigiu muito tempo para crackear a chave.
+
+O código pode ser encontrado no crack.c
 
 5- A questão 5 foi resolvida com base no parâmetro a. Caso ele seja positivo, basta retornar
 a % n. Caso seja negativo, eu altero esse valor para positivo, e fico somando meu valor de n
