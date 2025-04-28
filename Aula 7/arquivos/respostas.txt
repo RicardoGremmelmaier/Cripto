@@ -1,0 +1,16 @@
+1. Para o primeiro, a chave pública é 7,143, a chave privada é 103,143 e o texto cifrado é: 48
+Para o segundo a chave pública é 5,133, a chave privada é 65,133 e o texto cifrado é: 62
+Para o terceiro a chave pública é 7,187, a chave privada é 23,187 e o texto cifrado é: 11
+
+2. O valor de e correto a se utilizar é o 49, já que o MDC retornado pelo euclides estendido
+utilizando o 32 é o próprio 32. A chave privada resultante 209,697.
+
+3. 2623 é divisível por 43 multiplicado por 61
+MDC: 1
+x: 1088
+
+4. 6326693 é divisível por 787 multiplicado por 8039
+MDC: 1
+x: 666
+
+O código para 3 e para a 4 pode ser encontrado no crack.c
