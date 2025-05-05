@@ -1,0 +1,37 @@
+1- A primeira e a terceira assinatura são válidas, já que para as assinaturas, seus hashs são respectivamente
+x1 = 123
+x2 = 9644
+x3 = 4333
+
+2- Inicialmente, Alice e Bob precisam gerar suas chaves privadas e públicas usando o RSA. Então, Alice calcula o
+Hash da mensagem H e assina digitalmente o hash com sua chave privada. Após isso, Alice criptografa a mensagem e o Hash
+com a chave pública de Bob e envia esses valores para Bob. Bob usa sua chave privada para decriptar O Hash e a mensagem encriptados.
+Então ele calcula o hash da mensagem e verifica a assinatura de Alice usando a chave pública de Alice. Se os dois Hash baterem, a 
+assinatura é válida e a mensagem não foi alterada.
+
+5- A assinatura digital no portal gov.br é realizada por meio de um sistema que utiliza criptografia assimétrica, garantindo a 
+autenticidade e integridade dos documentos assinados. Esse processo envolve o uso de certificados digitais e o armazenamento 
+seguro das chaves privadas dos usuários.
+
+O portal gov.br oferece três tipos de assinatura eletrônica, conforme definido pela Lei nº 14.063/2020:
+
+a. O portal gov.br oferece três tipos de assinatura eletrônica, conforme definido pela Lei nº 14.063/2020:
+
+b. Assinatura Eletrônica Avançada: Utiliza certificados não emitidos pela ICP-Brasil ou outros meios de comprovação da autoria 
+e integridade de documentos eletrônicos. É o caso da assinatura gov.br, que requer uma conta de nível prata ou ouro.
+
+c. Assinatura Eletrônica Qualificada: Utiliza certificado digital emitido pela Infraestrutura de Chaves Públicas Brasileira 
+(ICP-Brasil), proporcionando o mais alto nível de segurança e validade jurídica.
+
+Esses procedimentos asseguram que o documento assinado digitalmente tenha a mesma validade de um documento com assinatura física, 
+conforme regulamentado pelo Decreto nº 10.543/2020.
+
+As chaves privadas, essenciais para a assinatura digital, são armazenadas de forma segura para garantir que apenas o titular 
+possa utilizá-las. Existem duas formas principais de armazenamento:
+
+a. Dispositivos Criptográficos Pessoais: Tokens USB ou smart cards que armazenam a chave privada do usuário. O acesso é protegido 
+por senha pessoal, e o dispositivo deve ser conectado ao computador no momento da assinatura.
+
+b. Certificados Digitais em Nuvem: A chave privada é armazenada em dispositivos criptográficos (HSM - Hardware Security Module) 
+de prestadores de serviços de confiança credenciados pela ICP-Brasil. Esse modelo permite o acesso ao certificado via internet, 
+sem a necessidade de mídia física, e pode ser utilizado em múltiplos dispositivos, como smartphones.
