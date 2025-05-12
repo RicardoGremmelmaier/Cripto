@@ -1,0 +1,46 @@
+2- Foram obtidos os seguintes Hash através do site https://emn178.github.io/online-tools/sha256.html:
+
+55a5e9e78207b4df8699d60886fa070079463547b095d1a05bc719bb4e6cd251
+
+c00357563669ed21c34e13687cad669038eb88a2831fc8109b40ddc62f63e934
+
+2c70dfbc967bd610fc7fbc6dfef0708a99d6be1fc44be3dffa47f0dde132442b
+
+É possível perceber que pequenas mudanças geram hashes completamente diferentes, mostrando assim sua imprevisibilidade, sensibilidade
+e principalmente, sua segurança a colisões.
+
+3- Porque assinaturas digitais funcionam sobre o hash da mensagem. Se for possível gerar duas mensagens diferentes com o mesmo hash, um atacante pode
+fazer uma assinatura legítima de uma mensagem aparentemente inofensiva, substituí-la por uma mensagem maliciosa que gera o mesmo hash e
+essa mensagem maliciosa passaria como válida, pois o hash é o mesmo e, portanto, a assinatura também será aceita. Isso compromete completamente a integridade 
+e autenticidade da assinatura digital.
+
+Usamos o sha256 porque o MD5 e SHA1 já possuem colisões conhecidas, tornando-os inseguros.
+
+6-
+Assinaturas digitais:
+O hash da mensagem é assinado, não a mensagem inteira, tornando o processo mais rápido e garantindo integridade.
+
+Verificação de integridade de arquivos:
+Um hash (ex: SHA-256) é publicado junto com o arquivo. Ao calcular o hash localmente, o usuário pode verificar se o arquivo não foi alterado.
+
+Armazenamento de senhas:
+Senhas são armazenadas como hashes em bancos de dados. Assim, mesmo que o banco de dados seja invadido, as senhas reais não são reveladas.
+
+Tabelas hash (estruturas de dados):
+Hashes são usados para indexar e acessar rapidamente dados em estruturas como tabelas de dispersão (hash tables).
+
+Mineração de criptomoedas (ex: Bitcoin):
+Hashes são usados no processo de prova de trabalho (proof-of-work), onde os mineradores procuram um nonce que gere um hash com certas propriedades.
+
+7- Para verificar a integridade você calcula o hash SHA-256 do arquivo baixado usando uma ferramenta e compara com o hash fornecido no site,
+se os dois hashes forem iguais, a integridade está garantida. Se apenas 1 byte for alterado, o hash SHA-256 resultante será completamente diferente, 
+permitindo identificar até a menor modificação no arquivo.
+
+8- Na mineração de Bitcoin, os mineradores tentam encontrar um valor (chamado nonce) que, ao ser incluído no bloco e hasheado com SHA-256, 
+gere um hash com um certo número de zeros à esquerda (ou abaixo de um determinado alvo). Esse processo é conhecido como prova de trabalho (proof-of-work).
+A função hash garante que: o trabalho é difícil de encontrar (requer tentativa e erro); a verificação do resultado é rápida; o conteúdo do 
+bloco não foi modificado (garantia de integridade).
+
+Ou seja, a função hash é fundamental para garantir segurança, integridade e escassez no funcionamento do Bitcoin.
+
+
